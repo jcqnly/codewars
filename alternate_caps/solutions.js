@@ -1,21 +1,11 @@
 function capitalize(s){
-  var evenString = "";
+  var evenString = [];
     for(var i = 0; i < s.length; i++){
-      if (i % 2 === 0) {
-          evenString += s[i].toUpperCase();
-      }
-      else {
-          evenString += s[i].toLowerCase();
-       }   
+      (i % 2 === 0) ? evenString += s[i].toUpperCase() : evenString += s[i];
     }
-  var oddString = "";
+  var oddString = [];
     for(var i = 0; i < s.length; i++){
-      if (i % 2 !== 0) {
-          oddString += s[i].toUpperCase();
-      }
-      else {
-          oddString += s[i].toLowerCase();
-       }   
+      (i % 2 !== 0) ? oddString += s[i].toUpperCase() : oddString += s[i];  
     }
-  return [evenString, oddString];
+    return [evenString, oddString];
 };
