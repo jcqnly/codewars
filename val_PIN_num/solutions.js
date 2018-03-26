@@ -1,0 +1,1 @@
+let validatePIN = pin => RegExp('^[0-9]{4}([0-9]{2})?$').test(pin);
